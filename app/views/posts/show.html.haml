@@ -1,0 +1,10 @@
+%h1 show Post
+%tr
+  %td= @post.id
+  %br/
+  %td= @post.pname
+  %br/
+%h2 Comments
+= render "comments/comment"
+%h2 Add a comment:
+= render 'comments/form'

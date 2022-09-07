@@ -1,0 +1,12 @@
+%h1 Enter new post
+= form_with model: @post   do |f|
+  = f.label :Post_name
+  = f.text_field :pname ,placeholder: "Enter post name"
+  %br/
+  %br/
+  = f.fields_for :comments,Comment.new do |s|
+    = s.label :commenter
+    = s.text_field :commenter ,placeholder: "Enter commenter"
+    = s.label :comment
+    = s.text_field :body ,placeholder: "Enter comment"
+  = f.submit

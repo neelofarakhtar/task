@@ -1,0 +1,13 @@
+= link_to "Add post",new_post_path
+%h2 Show All Posts
+- @posts.each do |p|
+  .field
+    = p.id
+    = p.pname
+    %ul
+      %li= link_to "Show", post_path(p)
+      %li= link_to "Destroy", post_path(p), data: { |
+            turbo_method: :delete,                 |
+            turbo_confirm: "Are you sure?"         |
+          }                                        |
+      %li= link_to "Edit",edit_post_path(p)

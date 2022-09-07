@@ -1,0 +1,6 @@
+%h2 Edit user
+= form_with scope: :post, url: post_path(@post), method: :put  do |f|
+  %div
+    = f.label :Post_name
+    = f.text_field :pname ,placeholder: "Enter post name"
+  = f.submit
