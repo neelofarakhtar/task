@@ -17,7 +17,7 @@
    
     <%= link_to "follow button", profile_path(current_user.id), method: :get %>
     <br />
-    <%= link_to "My post",posts_path %>
+    <%= link_to "post",posts_path %>
     <%= button_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
     <%= link_to "Login", new_user_session_path %>
