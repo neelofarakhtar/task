@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   post 'profiles/follow', to: 'profiles#follow'
   delete 'profiles/unfollow', to: 'profiles#unfollow'
+   get "search", to: "profiles#search"
   
 end

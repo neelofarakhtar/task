@@ -1,4 +1,8 @@
 <h1><%= user.email %></h1>
+<%= form_tag search_path(current_user.id), method: 'get' do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Search" %>
+<% end %>
 <br />
 <%= render 'profiles/follower_count', user: user %>
 <div><%= user.followees.count %> following</div>

@@ -1,9 +1,15 @@
 class ProfilesController < ApplicationController
 	include ProfilesHelper
 
-  before_action :set_user
+   before_action :set_user, only: %i[ show ]
 
   def show; end
+
+#   def search
+#     # debugger
+#   @user = User.where(email: params[:search])
+#   redirect_to @user
+# end
 
   def follow
     Relationship.create_or_find_by(follower_id: current_user.id, followee_id: @user.id)
